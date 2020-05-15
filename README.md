@@ -1,26 +1,42 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # surbayes
 
 <!-- badges: start -->
+
 <!-- badges: end -->
 
-The goal of surbayes is to provide Bayesian SUR analysis quickly. The package has direct Monte Carlo implementation, which is much faster than Gibbs sampling. It also allows for the analysis of SUR models using power priors via Gibbs sampling.
+The goal of surbayes is to provide tools for Bayesian analysis of the
+seemingly unrelated regression (SUR) model. In particular, we implement
+the direct Monte Carlo (DMC) approach of Zellner and Ando (2010). We
+also implement a Gibbs sampler to sample from a power prior on the SUR
+model.
 
 ## Installation
 
-You can install the released version of surbayes from [CRAN](https://CRAN.R-project.org) with:
+You can install the released version of surbayes from
+[CRAN](https://CRAN.R-project.org) with:
 
 ``` r
 install.packages("surbayes")
 ```
 
-## Example
-
-Below are two examples on how to sample from the posterior. The first run of `sur_sample` uses direct Monte Carlo, and the second run uses Gibbs since a historical data set is provided. See `help(sur_sample)` for details.
+And the development version from [GitHub](https://github.com/) with:
 
 ``` r
+# install.packages("devtools")
+devtools::install_github("ethan-alt/surbayes")
+```
+
+## Example
+
+This is a basic example which shows you how to sample from the posterior
+
+``` r
+library(surbayes)
 ## Taken from bayesm package
-M = 10
+M = 10 ## number of samples
 set.seed(66)
 ## simulate data from SUR
 beta1 = c(1,2)
@@ -43,7 +59,8 @@ names(data) = c( paste0( 'y', 1:2 ), paste0('x', 1:(ncol(data) - 2) ))
 formula.list = list(y1 ~ x1, y2 ~ x2 + x3)
 
 ## Fit models
-out_dmc = sur_sample( formula.list, data, M = M )            ## DMC--no power prior
-out_powerprior = sur_sample( formula.list, data, M, data )   ## Gibbs--power prior
+out_dmc = sur_sample( formula.list, data, M = M )            ## DMC used
+#> Direct Monte Carlo sampling used
+out_powerprior = sur_sample( formula.list, data, M, data )   ## Gibbs used
+#> Gibbs sampling used for power prior model
 ```
-

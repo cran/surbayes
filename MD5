@@ -1,4 +1,4 @@
-2b32a3c1e85a8c82851f6c8a73cb7dc6 *DESCRIPTION
+c75ac34b176aca580298d368bb23b991 *DESCRIPTION
 ac78f707ccb89ba0a6acecdc211b10f1 *NAMESPACE
 d98855523aa59a802162b4c3d66ff9d0 *NEWS.md
 f85616b1417bb06044763d613c89f16f *R/RcppExports.R
@@ -7,7 +7,7 @@ e3008c44f66e07dc05ac8235d96caa6b *R/sur_sample.R
 43ac724c06e88dc58b180f3cd37c107f *R/sur_sample_dmc.R
 fc4124594bf17f1e0e3321c9f114deb0 *R/sur_sample_powerprior.R
 c8efff4d3cd3daf74ac983899d8314b1 *R/surbayes-package.R
-f38e4683122123e487ff3a16cdd9ebee *README.md
+7151d1fb74ce1df7f787cb67d441bef4 *README.md
 3077c6e5ce56274b5f75ecc48b3d2d13 *man/fastKronEye_Y.Rd
 13e905d7b4564bde636f0bd435e8b85d *man/fastKronEye_crossprod.Rd
 1a7aa81a10fd484efb55a8d226c2b5f4 *man/predict.surbayes.Rd
@@ -27,5 +27,5 @@ b17fa6ecf30748ecdb7c75b9b9e1afe1 *src/RcppExports.cpp
 6ac4c9b992cb0582007bff2c33b87b16 *src/kronecker.cpp
 59831cebaba83e784db706a03cfcdd3a *src/post.h
 9660a1e70544130e9e4e0e7fadaf128f *src/predict_surbayes_cpp.cpp
-4bc2c8d07c4f254a2ba828fd7b7541f1 *src/sur_powerprior_cpp.cpp
+f41ed2258f3ebc2a62f0bee02650b29b *src/sur_powerprior_cpp.cpp
 27b674d4dcbe8a0a2fa4b8b7fbbd84bb *src/sur_sample_cpp.cpp
